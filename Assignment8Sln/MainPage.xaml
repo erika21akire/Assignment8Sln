@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:Assignment8Sln"
+             x:Class="Assignment8Sln.MainPage"
+             BackgroundImageSource="backdrop.jpg">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="5"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="First Name" FontAttributes="Bold" Grid.Row="1"/>
+                <Label Grid.Row="1" Text="Surname" FontAttributes="Bold"/>
+                <Label Grid.Row="2" Text="Email" FontAttributes="Bold"/>
+
+                <!-- User Name -->
+                <Entry Grid.Column="1"  
+                       
+                       Text="{Binding CurrentClient.Name }"/>
+
+                <!-- User Surname -->
+                <Entry Grid.Row="1" Grid.Column="1" 
+                       
+                       Text="{Binding CurrentClient.Surname }"/>
+
+                <!-- User Email -->
+                <Entry Grid.Row="2" Grid.Column="1" 
+                       
+                       Text="{Binding CurrentClient.EmailAddress }"/>
+
+            </Grid>
+
+            <!-- Password -->
+            <Entry Placeholder="Password (12 characters)" 
+                   
+                   Text="{Binding CurrentClient.Password}" FontAttributes="Bold"/>
+
+
+            
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
+

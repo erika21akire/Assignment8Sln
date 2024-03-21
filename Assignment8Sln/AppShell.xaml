@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Assignment8Sln.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Assignment8Sln.Models"
+    Shell.FlyoutBehavior="Disabled"
+    Title="Assignment8Sln"
+    BackgroundColor="#e5d3b3">
+
+
+    <TabBar>
+        <ShellContent
+            Title="HOME"
+            Icon="home.png"
+            ContentTemplate="{DataTemplate local:HomePage}"/>
+
+        <ShellContent
+        Title="SEARCH"
+            Icon="magnifyingglass.png"
+        ContentTemplate="{DataTemplate local:Search}"/>
+                
+        <ShellContent
+        Title="SHOPPING CART"
+        Icon="shoppingcart.png"
+        ContentTemplate="{DataTemplate local:ShoppingCart}"/>
+
+        <ShellContent
+            Title="PROFILE"
+            Icon="search.png"
+            ContentTemplate="{DataTemplate local:ProfilePage}" />
+
+
+    </TabBar>
+
+</Shell>
